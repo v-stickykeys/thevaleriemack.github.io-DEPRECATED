@@ -4,7 +4,15 @@
 	<ul>
 		<li>Cornell University</li>
 	</ul>
-	<p>Relevant coursework</p>
+	<div class="ui accordion">
+  <div class="title">
+    <i class="dropdown icon"></i>
+    Relevant coursework
+  </div>
+  <div class="content">
+    <p class="transition hidden">Classes</p>
+  </div>
+</div>
 </article>
 <article>
 	<img class="article-icon" src="">
