@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Val Mack</title>
+	<title>Valerie Mack</title>
 	<link rel="stylesheet" href="css/main.css?v=1" type="text/css">
 	<link rel="stylesheet" href="css/semantic.min.css?v=1" type="text/css">
 
@@ -17,57 +17,79 @@
 	<script src="js/script.js" type="text/javascript"></script>
 </head>
 <body>
-  <header>
-    <button class="massive circular ui icon black button">
-      <i class="settings icon"></i>
-    </button>
-    <div id="abvFld" class="ui vertical masthead center aligned segment">
       <!-- MENU -->
-      <div class="ui container" id="menu">
+      <div class="ui container">
+
         <div class="ui secondary pointing menu">
+          <p class="item">JUMP TO:</p>
           <a href="#projects" class="active item">
             Projects
           </a>
-          <a href="#designs" class="item">
+          <a href="#designs" class="active item">
             Graphic Designs
           </a>
-          <div class="ui inverted pink right menu">
+          <div class="right menu">
             <a class="item">
               <i class="mail icon"></i>
               Contact
             </a>
           </div>
         </div>
+
+        <div class="ui masthead basic segment">
+        </div>
+
       </div>
-      <div class="ui text container">
-        <h1 class="ui header">Valerie Denay Mack</h1>
-      </div>
+
+      <!-- mobile -->
+      <button id="bttn" class="sticky massive circular ui icon black button">
+      <i class="list icon"></i>
+    </button>
+
+    <!-- <img id="hdrImg" src="images/header.png" alt="Pixel Perfect" /> -->
+
+
+<div class="ui grid container" id="container">
+
+  <div class="three wide column">
+    <div class="ui basic sticky segment" id="sdBr">
+      <h1>VAL</h1>
+      <h1>Denay</h1>
+      <h1>Mack</h1>
     </div>
-    <img id="hdrImg" src="images/header.png" alt="Pixel Perfect" />
-  </header>
 
-	<div class="ui basic segment">
-		<h4 class="ui horizontal divider header">
-  <a name="projects">Projects</a>
-  <!-- <i class="tag icon"></i> -->
-</h4>
+  </div>
 
-<div class="ui link cards">
+<!-- MAIN CONTENT -->
+<div class="thirteen wide column" id="mnCntnt">
 
-  <div class="card">
-    <a class="image" href="#">
-  		<img src="images/covers/clonecombat-cover.png">
-  	</a>
-  	<div class="content">
-  		<a class="header" href="#">Clone Combat</a>
-  		<div class="meta">
-  			<span class="date">Fall 2015</span>
-  		</div>
-  		<div class="description">
-  			Designed UI for Clone Combat. 3.5 ranking on Newgrounds.
-  		</div>
-  	</div>
-  	<div class="extra content">
+
+<div class="ui basic segment">
+
+  <!-- divider -->
+  <h3 class="ui horizontal hidden divider">
+    <p name="projects">Projects</p>
+  </h3>
+
+<!-- CARDS -->
+
+<div class="ui three stackable special cards">
+
+   <div class="card">
+    <div class="blurring dimmable image">
+      <div class="ui dimmer">
+        <div class="content">
+          <div class="center">
+            <div class="ui inverted button">Play on Newgrounds</div>
+        <div class="description">
+          Designed UI for Clone Combat. 3.5 ranking on Newgrounds.
+        </div>
+          </div>
+        </div>
+      </div>
+      <img src="images/covers/clonecombat-cover.png">
+    </div>
+    <div class="extra content">
       <span class="right floated">
         <a href="http://www.newgrounds.com/portal/view/666197">Play on Newgrounds</a>
       </span>
@@ -75,96 +97,137 @@
   </div>
 
   <div class="card">
-    <a class="image" href="#">
-      <img src="images/covers/aoh-cover.png">
-    </a>
-    <div class="content">
-      <a class="header">Mechanical Dreams</a>
-      <div class="meta">
-      	<span class="date">Summer 2015</span>
+    <div class="blurring dimmable image">
+      <div class="ui dimmer">
+        <div class="content">
+          <div class="center">
+            <div class="ui inverted button">Add Friend</div>
+            <a class="header" href="#">Mechanical Dreams</a>
+        <div class="meta">
+          <span class="date">Summer 2015</span>
+        </div>
+        <div class="description">
+          UI Design
+        </div>
+          </div>
+        </div>
       </div>
-      <div class="description">
-  			UI design.
-  		</div>
+      <img src="images/covers/aoh-cover.png">
     </div>
   </div>
 
   <div class="card">
-    <div class="image">
+    <div class="blurring dimmable image">
+      <div class="ui dimmer">
+        <div class="content">
+          <div class="center">
+            <a class="header" href="#">Gix Science</a>
+        <div class="meta">
+          <span class="date">Spring 2015</span>
+        </div>
+        <div class="description">
+          UI for github style ipython research management.
+        </div>
+          </div>
+        </div>
+      </div>
       <img src="images/covers/gix-cover.png">
     </div>
-    <div class="content">
-      <div class="header">Gix Science</div>
-      <div class="meta">
-        <a>UI for github style ipython research management.</a>
-      </div>
-    </div>
-    <div class="extra content">
-      <span class="right floated">
-        Spring 2015
-      </span>
-    </div>
   </div>
 
-  <div class="card">
-    <a class="image" href="#">
+    <div class="card">
+    <div class="blurring dimmable image">
+      <div class="ui dimmer">
+        <div class="content">
+          <div class="center">
+            <a class="header" href="#">Belle Apps Delivery</a>
+        <div class="meta">
+          <span class="date">Fall 2014</span>
+        </div>
+        <div class="description">
+          Front-end web design.
+        </div>
+          </div>
+        </div>
+      </div>
       <img src="images/covers/belle-cover.png">
-    </a>
-    <div class="content">
-      <a class="header">Belle Apps Delivery</a>
-      <div class="meta">
-        <span class="date">Fall 2014</span>
-      </div>
-      <div class="description">Front-end web design.</div>
-    </div>
-    <div class="extra content">
-      <span class="right floated">
-        <a href="http://www.belledelivery.com">belledelivery.com</a>
-      </span>
     </div>
   </div>
 
-  <div class="card">
-    <div class="image">
+
+    <div class="card">
+    <div class="blurring dimmable image">
+      <div class="ui dimmer">
+        <div class="content">
+          <div class="center">
+            <a class="header" href="#">Jesture</a>
+        <div class="meta">
+          <span class="date">Fall 2014</span>
+        </div>
+        <div class="description">
+          Mobile app UI/UX design.
+        </div>
+          </div>
+        </div>
+      </div>
       <img src="images/covers/jesture-cover.png">
     </div>
-    <div class="content">
-      <div class="header">Jesture</div>
-      <div class="meta">
-        <a>Mobile app UI/UX design.</a>
-      </div>
-    </div>
-    <div class="extra content">
-      <span class="right floated">
-        Fall 2014
-      </span>
-    </div>
   </div>
 
-  <div class="card">
-    <div class="image">
+    <div class="card">
+    <div class="blurring dimmable image">
+      <div class="ui dimmer">
+        <div class="content">
+          <div class="center">
+            <a class="header" href="#">Augmate</a>
+        <div class="meta">
+          <span class="date">Summer 2014</span>
+        </div>
+        <div class="description">
+          AR design for Google Glass.
+        </div>
+          </div>
+        </div>
+      </div>
       <img src="images/covers/augmate-cover.png">
     </div>
-    <div class="content">
-      <div class="header">Augmate</div>
-      <div class="meta">
-        <a>AR design for Google Glass.</a>
-      </div>
-    </div>
-    <div class="extra content">
-      <span class="right floated">
-        Summer 2014
-      </span>
-    </div>
   </div>
-
+<!-- cards -->
+</div>
+<!-- segment -->
 </div>
 
-<h4 class="ui horizontal divider header">
-  <a name="designs">Designs</a>
-  <!-- <i class="tag icon"></i> -->
-</h4>
+<div class="ui basic segment">
 
+<h3 class="ui horizontal hidden divider">
+    <p name="designs">Designs</p>
+  </h3>
+
+<!-- divider -->
+
+<div class="ui equal width stackable grid">
+  <div class="column">
+    <img class="ui medium image" src="images/dino1.png">
+    <img class="ui medium image" src="images/dino4.png">
+  </div>
+  <div class="column">
+    <img class="ui medium image" src="images/dino2.png">
+    <img class="ui medium image" src="images/dino3.png">
+    <img class="ui medium image" src="images/bevclub.png">
+  </div>
+  <div class="column">
+    <img class="ui medium image" src="images/duvv.png">
+    <img class="ui medium image" src="images/ccp.png">
+
+  </div>
+</div>
+
+<!-- segment -->
+</div>
+
+<!-- column -->
+</div>
+<!-- grid -->
 </div>
 
 

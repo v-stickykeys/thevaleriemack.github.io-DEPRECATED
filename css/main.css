@@ -9,18 +9,30 @@ body {
 	min-height: 600px;
 }
 
+#container {
+}
+
 /*.ui.container {
 	width: 1127px;
 	margin-right: auto;
 	margin-left: auto;
 }*/
 
+#sdBr {
+	margin-top: 60px;
+}
+
 #hdrImg {
 	width: 100%;
 	height: auto;
-	z-index: -1;
-	position: absolute;
 	top: 0;
+}
+
+#bttn {
+	position: fixed;
+	margin: 10px 0px 0px 10px;
+	float: left;
+	display: none;
 }
 
 #menu {
@@ -28,7 +40,12 @@ body {
 	margin: 0 auto;
 }
 
+.ui.medium.image {
+	float:left;
+}
+
 @media all and (max-width: 700px) {
 	#menu{display: none;}
 	.masthead.segment{min-height: 300px;}
+	#bttn{display: inline;}
 }

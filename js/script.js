@@ -1,4 +1,10 @@
 $(document).ready(function(){
+
+  // sticky
+  $('.ui.sticky')
+  .sticky({
+    context: '#mnCntnt'
+  });
 	
 	// smooth scroll
 	$(function() {
@@ -14,6 +20,11 @@ $(document).ready(function(){
       }
     }
   });
+});
+
+// cards dimmer
+  $('.special.cards .image').dimmer({
+  on: 'hover'
 });
 
 
