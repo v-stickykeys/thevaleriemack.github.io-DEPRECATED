@@ -5,6 +5,23 @@ $(document).ready(function(){
   .sticky({
     context: '#mnCntnt'
   });
+
+  // modal
+  $('#img-jk').click(function() {
+    $('#modal-jk').modal('show');
+});
+
+  $('#closeButton').click(function() {
+    $('.ui.small.modal').modal('hide');
+  });
+
+  $('.ui.medium.image').click(function() {
+    var img = this;
+    $('#modalHeader').html(img.alt);
+    $('#modalImage').attr('src', img.src);
+    $('.ui.small.modal').modal('show');
+  });
+
 	
 	// smooth scroll
 	$(function() {
