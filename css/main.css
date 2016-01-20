@@ -9,7 +9,12 @@ body {
 	min-height: 600px;
 }
 
+#precontainer {
+	font-size: 2em;
+}
+
 #container {
+	margin-top: 40px;
 }
 
 /*.ui.container {
@@ -23,9 +28,12 @@ body {
 }
 
 #hdrImg {
-	width: 100%;
-	height: auto;
 	top: 0;
+	z-index: -1;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 1;
 }
 
 #bttn {

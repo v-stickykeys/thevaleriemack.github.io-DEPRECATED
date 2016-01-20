@@ -21,7 +21,6 @@ $(document).ready(function(){
     $('#modalImage').attr('src', img.src);
     $('.ui.small.modal').modal('show');
   });
-
 	
 	// smooth scroll
 	$(function() {
@@ -38,6 +37,13 @@ $(document).ready(function(){
     }
   });
 });
+
+// fade to white on scroll
+  $(document).on('scroll', function(e){
+    $('#hdrImg').css('opacity',
+      ( 1 - ( $(document).scrollTop() / 560 ) )
+    );
+  });
 
 // cards dimmer
   $('.special.cards .image').dimmer({
