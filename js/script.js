@@ -39,12 +39,20 @@ $(document).ready(function(){
   });
 });
 
+var scrollTop = $(document).scrollTop();
 // fade to white on scroll
   $(document).on('scroll', function(e){
+
     $('#hdrImg').css('opacity',
-      ( 1 - ( $(document).scrollTop() / 560 ) )
+      ( 1 - ( $(document).scrollTop() / 500 ) )
     );
+    $('#hdrImg').css('margin-top',
+      (-700 + ( $(document).scrollTop() ) )+'px'
+      );
+
   });
+
+
 
 // cards dimmer
   $('.special.cards .image').dimmer({
