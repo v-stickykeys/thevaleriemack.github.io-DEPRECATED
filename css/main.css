@@ -20,6 +20,11 @@ body {
 	color:black;
 }
 
+.ui.masthead.basic.segment,
+.ui.sizer.vertical.basic.segment {
+	color:white;
+}
+
 .ui.huge.centered.header {
 	font-family: 'Lora', "helvetica", serif;
 }
@@ -99,6 +104,7 @@ body {
 	#sdBr{display: none;}
 	#hdrImg{display: none;}
 	#FUCKWIT {padding: 0px;}
+	.ui.centered.fluid.card {margin-bottom: 40px;}
 
 
 }
