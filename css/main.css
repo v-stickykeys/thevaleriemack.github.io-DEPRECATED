@@ -60,7 +60,7 @@ body {
 }
 
 #FUCKWIT {
-	padding: 100px;
+	padding: 40px;
 }
 
 .ui.divider {
@@ -89,7 +89,6 @@ body {
 
 .hider.ui.segment {
 	display: none;
-	float: left;
 	margin-bottom: 80px;
 }
 
@@ -99,5 +98,7 @@ body {
 	#bttn{display: inline;}
 	#sdBr{display: none;}
 	#hdrImg{display: none;}
+	#FUCKWIT {padding: 0px;}
+
 
 }

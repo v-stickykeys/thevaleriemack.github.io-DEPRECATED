@@ -3,8 +3,7 @@ $(document).ready(function(){
   // sticky
   $('.ui.sticky')
   .sticky({
-    context: '#mnCntnt',
-    pushing: true
+    context: '#mnCntnt'
   });
 
   // modal
