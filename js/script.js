@@ -28,14 +28,14 @@ $(document).ready(function(){
     $(card)
       .css('display', 'none');
     $('#'+card.id+'1')
-      .css('display', 'inline')
+      .css('display', 'block')
     ;
   });
 
   // hide hidden content
   $('.item.allpjcts').click(function() {
-    $('.card')
-      .css('display', 'inline')
+    $('.ui.centered.fluid.card')
+      .css('display', 'flex')
       ;
     $('.hider.ui.segment')
     .css('display', 'none')
@@ -62,7 +62,7 @@ $(document).ready(function(){
 
     // fade to white on scroll
     $('#hdrImg').css('opacity',
-      ( 1 - ( $(document).scrollTop() / 150 ) )
+      ( 1 - ( $(document).scrollTop() / 100 ) )
     );
     // parallax move on scroll
     $('#hdrImg').css('margin-top',
@@ -82,7 +82,7 @@ $(document).ready(function(){
 
 
 // cards dimmer
-  $('.special.cards .image').dimmer({
+  $('.card .image').dimmer({
   on: 'hover'
 });
 
