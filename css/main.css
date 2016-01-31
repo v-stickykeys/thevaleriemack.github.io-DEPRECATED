@@ -9,24 +9,32 @@ body {
 }
 
 #precontainer {
-	margin-top: 80px;
-	font-size: 1.5em;
-	color: black;
+	margin-top: 200px;
+	font-size: 1em;
 }
 
 .ui.masthead.basic.inverted.segment,
 .ui.sizer.vertical.basic.inverted.segment {
 	background-color: white;
-	color:black;
 }
 
 .ui.masthead.basic.segment,
 .ui.sizer.vertical.basic.segment {
-	color:white;
+	color: white;
 }
 
 .ui.huge.centered.header {
+	color: white;
 	font-family: 'Lora', "helvetica", serif;
+}
+
+
+#dropdown-icon {
+	margin-top: 40px;
+}
+
+.plus.icon.wrapper {
+	margin-top: 20px;
 }
 
 #container {
@@ -41,6 +49,7 @@ body {
 
 #sdBr {
 	margin-top: 60px;
+	padding-top: 40px;
 }
 
 #hdrImg {
@@ -76,6 +85,10 @@ body {
 	margin-bottom: 80px;
 }
 
+.description {
+	text-transform: uppercase;
+}
+
 .ui.medium.image.left.floated {
 	float:left;
 	padding:10px 0px;
@@ -95,6 +108,16 @@ body {
 .hider.ui.segment {
 	display: none;
 	margin-bottom: 80px;
+}
+
+.ui.footer {
+	height: 400px;
+}
+
+#ftrImg {
+	height: 50%;
+	overflow: hidden;
+
 }
 
 @media all and (max-width: 700px) {

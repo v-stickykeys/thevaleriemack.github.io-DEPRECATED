@@ -61,11 +61,11 @@ $(document).ready(function(){
 
     // fade to white on scroll
     $('#hdrImg').css('opacity',
-      ( 1 - ( $(document).scrollTop() / 100 ) )
+      ( 1 - ( $(document).scrollTop() / 400 ) )
     );
     // parallax move on scroll
     $('#hdrImg').css('margin-top',
-      ( -300 - ( $(document).scrollTop() * 2) )+'px'
+      ( -300 - ( $(document).scrollTop() * 1.2) )+'px'
       );
 
     // if ($(document).scrollTop() > 150) {
@@ -83,6 +83,14 @@ $(document).ready(function(){
 // cards dimmer
   $('.card .image').dimmer({
   on: 'hover'
+});
+
+
+// loop
+$(document).scroll(function(){
+      if (document.documentElement.clientHeight + $(window).scrollTop() >= $(document).height()) {
+        $(document).scrollTop(0);
+      }
 });
 
 
