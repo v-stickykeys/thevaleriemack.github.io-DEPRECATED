@@ -87,6 +87,9 @@ $(document).ready(function(){
 if (document.documentElement.clientWidth < 700) {
   document.getElementById("leftSide").className = "one wide";
   document.getElementById("mnCntnt").className = "fifteen wide column";
+} else {
+  document.getElementById("leftSide").className = "four wide column";
+  document.getElementById("mnCntnt").className = "twelve wide column";
 }
 
 // loop
