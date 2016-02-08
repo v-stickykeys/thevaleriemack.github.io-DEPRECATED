@@ -78,20 +78,23 @@ $(document).ready(function(){
 
   });
 
-
-
 // cards dimmer
   $('.card .image').dimmer({
   on: 'hover'
 });
 
 
+if (document.documentElement.clientWidth < 700) {
+  document.getElementById("leftSide").className = "one wide";
+  document.getElementById("mnCntnt").className = "fifteen wide column";
+}
+
 // loop
-$(document).scroll(function(){
-      if (document.documentElement.clientHeight + $(window).scrollTop() >= $(document).height()) {
-        $(document).scrollTop(0);
-      }
-});
+// $(document).scroll(function(){
+//       if (document.documentElement.clientHeight + $(window).scrollTop() >= $(document).height()) {
+//         $(document).scrollTop(0);
+//       }
+// });
 
 
 });

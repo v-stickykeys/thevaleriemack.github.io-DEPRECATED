@@ -52,6 +52,11 @@ body {
 	padding-top: 40px;
 }
 
+.custom {
+	width: 22px;
+	padding-top: 6px;
+}
+
 #hdrImg {
 	margin-top: -300px;
 	position: fixed;
@@ -110,13 +115,9 @@ body {
 	margin-bottom: 80px;
 }
 
-.ui.footer {
-	height: 400px;
-}
-
-#ftrImg {
-	height: 50%;
-	overflow: hidden;
+.ui.footer.vertical.segment {
+	text-align: center;
+	margin: 100px 0px 20px 0px;
 
 }
 
@@ -128,6 +129,21 @@ body {
 	#hdrImg{display: none;}
 	#FUCKWIT {padding: 0px;}
 	.ui.centered.fluid.card {margin-bottom: 40px;}
+
+	.ui.masthead.basic.inverted.segment,
+.ui.sizer.vertical.basic.inverted.segment {
+	background-color: black;
+}
+
+.ui.masthead.basic.segment,
+.ui.sizer.vertical.basic.segment {
+	color: black;
+}
+
+.ui.huge.centered.header {
+	color: black;
+	font-family: 'Lora', "helvetica", serif;
+}
 
 
 }

@@ -10,12 +10,6 @@
   <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
-  <script src="semantic/dist/semantic.min.js"></script>
-
-  <script src="js/jquery-2.1.4.min.js" type="text/javascript"></script>
-  <script src="js/semantic.min.js" type="text/javascript"></script>
-  <script src="js/background-blur.min.js"></script>
-  <script src="js/script.js" type="text/javascript"></script>
 </head>
 <body>
   <div id="hdrImg">
@@ -23,11 +17,11 @@
   </div>
 
   <!-- mobile -->
-  <div class="ui basic segment">
+<!--   <div class="ui basic segment">
     <button id="bttn" class="massive circular ui icon black button">
       <i class="sidebar icon"></i>
     </button>
-  </div>
+  </div> -->
 
   <!-- ABOUT -->
   <div id="precontainer" class="ui container">
@@ -70,13 +64,20 @@
 
     <div class="four wide column" id="leftSide">
       <div class="ui basic sticky center aligned segment" id="sdBr">
-        <h1>Valerie Denay Mack</h1>
-        <p> Strategist, Leader, Designer</p>
-        <p>BA Information Science</p>
-        <p>Business Minor
-          Cornell 2016</p>
-          <div>Contact links</div>
-          <div>Resume button</div>
+        <h1 class="ui header">
+          <div class="content">Val</div>
+          <div class="sub header">Strategist • Leader • Designer</div>
+          </h1>
+          <div>BA Information Science</div>
+          <div>Business Minor</div>
+          <div>Cornell University, 2016</div>
+
+          <div class="ui icon buttons">
+  <button class="ui basic  button"><i><img class="custom" src="fonts/quora.png"></i></button>
+  <button class="ui basic  button"><i class="large black github icon"></i></button>
+  <button class="ui basic button"><i class="large black linkedin icon"></i></button>
+</div>
+          <button class="ui basic button">View Resume</button>
         </div>
       </div>
 
@@ -152,7 +153,7 @@
                 <div class="content">
                   <div class="center">
                     <div class="description">
-                      UI & game design
+                      UI &amp; game design
                     </div>
                     <div class="plus icon wrapper">
                       <button class='circular basic inverted ui icon button'>
@@ -183,7 +184,7 @@
               <img class="ui medium image" src="images/samples/watch-sketches.jpg" alt="Gameplay Sketches">
             </div>
 
-            <p>After networking at a wearables roundtable hosted at Aaron Faber gallery, I became the apprentice to a Manhattan watchmaker with 30+ years of experience at Tourneau, Rolex, and Tiffany & Co.
+            <p>After networking at a wearables roundtable hosted at Aaron Faber gallery, I became the apprentice to a Manhattan watchmaker with 30+ years of experience at Tourneau, Rolex, and Tiffany &amp; Co.
             </p>
             <p>Throughout the summer, I used the knowledge I was gaining from my apprenticeship to design an educational watchmaking game for Art of Horology, the only watchmaking school in Manhattan. I was responsible for overseeing the project, and designing the gameplay and the user interface.
             </p>
@@ -238,8 +239,12 @@
             </p>
 
             <div class="ui medium rounded images">
-              <img class="ui medium image" src="images/samples/gix-session.png" alt="Session Mockup">
-              <img class="ui medium image" src="images/samples/gix-profile.png" alt="Profile Mockup">
+              <a href="#">
+                <img class="ui medium image" src="images/samples/gix-session.png" alt="Session Mockup">
+              </a>
+              <a href="#">
+                <img class="ui medium image" src="images/samples/gix-profile.png" alt="Profile Mockup">
+              </a>
             </div>
             <!-- gixcard1 -->
           </div>
@@ -273,7 +278,7 @@
 
             <h2 class="header">Belle Delivery</h2>
 
-            <p>Belle Delivery is a startup from Life Changing Labs in Ithaca New York. I wrote the diagram for their landing page using the canvas element so that it would be responsive. I also designed the UI for their web application.
+            <p>Belle Delivery is a startup from Life Changing Labs in Ithaca New York. I wrote the diagram for their landing page using the &lt;canvas&gt; element so that it would be responsive. I also designed the UI for their web application.
             </p>
 
             <div class="ui medium rounded images">
@@ -295,7 +300,7 @@
                 <div class="content">
                   <div class="center">
                     <div class="description">
-                      UX research & design
+                      UX research &amp; design
                     </div>
                     <div class="plus icon wrapper">
                       <button class='circular basic inverted ui icon button'>
@@ -342,7 +347,7 @@
                 <div class="content">
                   <div class="center">
                     <div class="description">
-                      UX research & design
+                      UX research &amp; design
                     </div>
                     <div class="plus icon wrapper">
                       <button class='circular basic inverted ui icon button'>
@@ -442,23 +447,21 @@
 
 <!-- segment -->
 </div>
-
 <!-- column -->
 </div>
 <!-- grid -->
-
 </div>
 
-  <div class="ui footer inverted vertical segment">
-Bitch please
-
-<div id="ftrImg">
-    <img class="ui centered image" src="images/header.png">
-  </div>
+  <div class="ui footer vertical segment">
+This website was created by Valerie Denay Mack. &copy; 2016
 </div>
 
 
 
-
+<script src="semantic/dist/semantic.min.js"></script>
+  <script src="js/jquery-2.1.4.min.js" type="text/javascript"></script>
+  <script src="js/semantic.min.js" type="text/javascript"></script>
+  <script src="js/background-blur.min.js"></script>
+  <script src="js/script.js" type="text/javascript"></script>
 </body>
 </html>
