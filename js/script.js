@@ -87,9 +87,11 @@ $(document).ready(function(){
 if (document.documentElement.clientWidth < 700) {
   document.getElementById("leftSide").className = "two wide";
   document.getElementById("mnCntnt").className = "fourteen wide column";
+  document.getElementById("sdBr").className = "ui basic center aligned segment";
 } else {
   document.getElementById("leftSide").className = "four wide column";
   document.getElementById("mnCntnt").className = "twelve wide column";
+  document.getElementById("sdBr").className = "ui basic sticky center aligned segment";
 }
 
 // loop
