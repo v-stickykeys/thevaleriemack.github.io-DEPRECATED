@@ -60,6 +60,10 @@ body {
 	padding-top: 1px;
 }
 
+.ui.basic.inverted.button {
+	border: none;
+}
+
 #hdrImg {
 	margin-top: -300px;
 	position: fixed;
