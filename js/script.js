@@ -60,9 +60,10 @@ $(document).ready(function(){
   $(document).on('scroll', function(e){
 
     // fade to white on scroll
-    $('#hdrImg').css('opacity',
-      ( 1 - ( $(document).scrollTop() / 400 ) )
-    );
+    // $('#hdrImg').css('opacity',
+    //   ( 1 - ( $(document).scrollTop() / 400 ) )
+    // );
+  
     // parallax move on scroll
     $('#hdrImg').css('margin-top',
       ( -300 - ( $(document).scrollTop() * 1.2) )+'px'
