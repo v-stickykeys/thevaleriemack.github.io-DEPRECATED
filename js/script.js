@@ -66,7 +66,7 @@ $(document).ready(function(){
   
     // parallax move on scroll
     $('#hdrImg').css('margin-top',
-      ( -300 - ( $(document).scrollTop() * 1.2) )+'px'
+      ( -200 - ( $(document).scrollTop() * 1.2) )+'px'
       );
 
     // if ($(document).scrollTop() > 150) {
