@@ -36,6 +36,10 @@ body {
 	margin-top: 40px;
 }
 
+#dropdown-icon-mobile {
+	display: none;
+}
+
 .plus.icon.wrapper {
 	margin-top: 20px;
 }
@@ -135,6 +139,8 @@ body {
 @media all and (max-width: 700px) {
 	/*#menu{display: none;}*/
 	.masthead.segment{min-height: 200px;}
+	#precontainer {margin-top: 20px; font-size: 1.3em;}
+	#dropdown-icon-mobile {display: block; margin-top: 40px;}
 	#jankless{display: inline;}
 	#sdBr{display: none;}
 	#hdrImg{display: none;}
