@@ -76,8 +76,8 @@ body {
 	height: 100%;
 	opacity: 1;
 	z-index: -10;
-	-webkit-filter: blur(1px);
-	filter: blur(1px);
+	-webkit-filter: blur(.8px);
+	filter: blur(.8px);
 }
 
 #bttn {
@@ -141,9 +141,11 @@ body {
 
 @media all and (max-width: 700px) {
 	/*#menu{display: none;}*/
-	.masthead.segment{min-height: 200px;}
+	/*.masthead.segment{min-height: 180px;}*/
 	#precontainer {margin-top: 20px; font-size: 1.3em;}
-	#dropdown-icon-mobile {display: block; margin-top: 40px;}
+	#container {margin-top: 20px;}
+	#dropdown-icon-mobile {display: block; margin-top: 80px;}
+	#dropdown-icon {display: none;}
 	#jankless{display: inline;}
 	#sdBr{display: none;}
 	#hdrImg{display: none;}
