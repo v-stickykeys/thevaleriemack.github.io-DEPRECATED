@@ -18,7 +18,7 @@ var imageRepo = new function() {
 	this.background = new Image();
 
 	// Set images src
-	this.background.src = "imgs/bg.png"
+	this.background.src = "imgs/bg.png";
 }
 
 /** Creates abstract object Drawable used as the base class for all
@@ -55,9 +55,8 @@ function Background() {
 		this.context.drawImage(imageRepo.background, this.x, this.y - this.canvasHeight);
 
 		// Reset if the image scrolled off the screen
-		if (this.y >= this.canvasHeight) {
+		if (this.y >= this.canvasHeight)
 			this.y = 0;
-		}
 	};
 }
 // Set background to inherit properties from Drawable. This does inheritance.
