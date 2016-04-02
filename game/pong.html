@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Space Shooter Demo</title>
-		<style>
-			canvas {
-				position: absolute;
-				top: 0px;
-				left: 0px;
-				background: transparent;
-				border: 1px solid #ccc;
-			}
-		</style>
+		<title>Pong Demo</title>
+		<link rel="stylesheet" href="pong.css?v=1" type="text/css">
 	</head>
-	<body onload="init()">
-	<!-- canvas for background -->
-	<canvas id="background" width="720" height="1280">
-		:( Your browser does not support HTML5 canvas. Try Chrome!
-	</canvas>
-	<script src="pong_one.js" type="text/javascript"></script>
-</body>
+	<body>
+		<div id="cnvs">
+			<!-- The canvas for the background -->
+			<canvas id="background" width="395" height="621">
+				:( It no working. Try Chrome!
+			</canvas>
+			<!-- The canvas for the cups and UI -->
+			<canvas id="main" width="395" height="621">
+			</canvas>
+			<!-- The canvas the ball uses (can only move up half the screen.) -->
+			<canvas id="primer" width="395" height="621">
+			</canvas>
+		</div>
+		<script src="pong_one.js"></script>
+	</body>
 </html>

@@ -1,0 +1,23 @@
+#cnvs {
+	width: 395px;
+	margin: 0 auto;
+}
+
+canvas {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background: transparent;
+}
+
+#background {
+	z-index: -2;
+}
+
+#main {
+	z-index: -1;
+}
+
+#ball {
+	z-index: 0;
+}
