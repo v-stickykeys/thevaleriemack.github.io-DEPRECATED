@@ -1,12 +1,16 @@
+#abt {
+	float: left;
+	width: 300px;
+}
+
 #cnvs {
 	width: 395px;
 	margin: 0 auto;
 }
 
 canvas {
-	position: absolute;
-	top: 0px;
-	left: 0px;
+	float: left;
+	position: fixed;
 	background: transparent;
 }
 

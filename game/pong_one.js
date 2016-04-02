@@ -114,12 +114,19 @@ function Ball() {
 	 */
 	this.draw = function() {
 		this.context.clearRect(this.x, this.y, this.width, this.height);
+		var stableHeight = this.canvasHeight;
+
 		this.y -= this.speed;
-		if (this.y <= 0 - this.height) {
-			return true;
+		this.x += .5; // keeps ball centered
+		// shrink ball as it is thrown
+		this.width -= 1.2;
+		this.height -= 1.2;
+		if (this.y <= stableHeight/2.5) {
+			return true; // clears ball object
 		}
 		else {
-			this.context.drawImage(imageRepository.ball, this.x, this.y);
+			// update position and size
+			this.context.drawImage(imageRepository.ball, this.x, this.y, this.width, this.height);
 		}
 	};
 	
@@ -129,6 +136,8 @@ function Ball() {
 	this.clear = function() {
 		this.x = 0;
 		this.y = 0;
+		this.width = imageRepository.ball.width;
+		this.height = imageRepository.ball.height;
 		this.speed = 0;
 		this.alive = false;
 	};
@@ -235,7 +244,7 @@ function Primer() {
 			this.draw();
 		}
 		
-		if (KEY_STATUS.space && counter >= shootRate) {
+		if (KEY_STATUS.click && counter >= shootRate) {
 			this.shoot();
 			counter = 0;
 		}
@@ -245,7 +254,7 @@ function Primer() {
 	* Shoots 1 ball
 	*/
 	this.shoot = function() {
-		this.ballPool.get(this.x+6, this.y, 10);
+		this.ballPool.get(this.x+6, this.y, 4);
 	};
 }
 Primer.prototype = new Drawable();
@@ -332,8 +341,9 @@ function animate() {
 // Original code by Doug McInnes
 KEY_CODES = {
   32: 'space',
-  37: 'left',
-  39: 'right',
+  65: 'left', // a
+  68: 'right', // d
+  0: 'click'
 }
 
 // Creates the array to hold the KEY_CODES and sets all their values
@@ -360,9 +370,9 @@ document.onkeydown = function(e) {
   }
 }
 /**
- * Sets up the document to listen to ownkeyup events (fired when
+ * Sets up the document to listen to onkeyup events (fired when
  * any key on the keyboard is released). When a key is released,
- * it sets teh appropriate direction to false to let us know which
+ * it sets the appropriate direction to false to let us know which
  * key it was.
  */
 document.onkeyup = function(e) {
@@ -372,7 +382,28 @@ document.onkeyup = function(e) {
     KEY_STATUS[KEY_CODES[keyCode]] = false;
   }
 }
-
+/**
+* Sets up the doc to listen to onmousedown events (fired when user clicks on 
+* an element).
+*/
+document.onmousedown = function(e) {
+	keyCode = 0;
+	if (KEY_CODES[keyCode]) {
+		e.preventDefault();
+		KEY_STATUS[KEY_CODES[keyCode]] = true;
+	}
+}
+/**
+* Sets up the doc to listen to onmouseup events (fired when user releases mouse
+* ).
+*/
+document.onmouseup = function(e) {
+	keyCode = 0;
+	if (KEY_CODES[keyCode]) {
+		e.preventDefault();
+		KEY_STATUS[KEY_CODES[keyCode]] = false;
+	}
+}
 
 /**	
  * requestAnim shim layer by Paul Irish
