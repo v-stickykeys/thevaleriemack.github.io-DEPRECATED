@@ -174,16 +174,6 @@ function Pool(maxSize) {
 			pool.unshift(pool.pop());
 		}
 	};
-	/*
-	* probs will modify this because we only want 1 ball shot at a time
-	*/
-	// this.getTwo = function(x1, y1, speed1, x2, y2, speed2) {
-	// 	if(!pool[size - 1].alive && 
-	// 	   !pool[size - 2].alive) {
-	// 			this.get(x1, y1, speed1);
-	// 			this.get(x2, y2, speed2);
-	// 		 }
-	// };
 
 	/*
 	* Draws any in use Balls. If a ball goes out of range, clears it and 
@@ -213,7 +203,7 @@ function Primer() {
 	this.ballPool = new Pool(1);
 	this.ballPool.init();
 
-	var shootRate = 15;
+	var shootRate = 1;
 	var counter = 0;
 
 	this.draw = function() {
@@ -254,7 +244,8 @@ function Primer() {
 	* Shoots 1 ball
 	*/
 	this.shoot = function() {
-		this.ballPool.get(this.x+6, this.y, 4);
+		this.ballPool.get(this.x, this.y, 4);
+		this.context.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
 	};
 }
 Primer.prototype = new Drawable();
@@ -301,7 +292,7 @@ function Game() {
 			this.background = new Background();
 			this.background.init(0,0); // Set draw point to 0,0
 
-			// Initialise the primer object
+			// Initialize the primer object
 			this.primer = new Primer();
 			// Set the primer to start near the bottom middle of the canvas
 			var primerStartX = this.primerCanvas.width/2 - imageRepository.primer.width/2;
