@@ -19,9 +19,10 @@ var imageRepository = new function() {
 	this.background = new Image();
 	this.primer = new Image();
 	this.ball = new Image();
+	this.cup = new Image();
 
 	// Ensure all images have loaded before starting the game
-	var numImages = 3;
+	var numImages = 4;
 	var numLoaded = 0;
 	function imageLoaded() {
 		numLoaded++;
@@ -38,11 +39,15 @@ var imageRepository = new function() {
 	this.ball.onload = function() {
 		imageLoaded();
 	}
+	this.cup.onload = function() {
+		imageLoaded();
+	}
 	
 	// Set images src
 	this.background.src = "imgs/bg.png";
 	this.primer.src = "imgs/ball.png";
 	this.ball.src = "imgs/ball.png";
+	this.cup.src = "imgs/cup.png";
 }
 
 
@@ -93,11 +98,11 @@ Background.prototype = new Drawable();
 * Creates the Ball object that the player shoots. The balls are drawn on the 
 * "main" canvas.
 */
-function Ball() {	
-	this.alive = false; // Is true if the bullet is currently in use
-	
+function Ball(object) {	
+	this.alive = false; // Is true if the ball is currently in use
+	var self = object;
 	/*
-	 * Sets the bullet values
+	 * Sets the ball values
 	 */
 	this.spawn = function(x, y, speed) {
 		this.x = x;
@@ -121,12 +126,14 @@ function Ball() {
 		// shrink ball as it is thrown
 		this.width -= 1.2;
 		this.height -= 1.2;
-		if (this.y <= stableHeight/2.5) {
+
+		if (self === "ball" && this.y <= stableHeight/2.5) {
 			return true; // clears ball object
 		}
 		else {
 			// update position and size
 			this.context.drawImage(imageRepository.ball, this.x, this.y, this.width, this.height);
+			return false;
 		}
 	};
 	
@@ -152,15 +159,25 @@ function Pool(maxSize) {
 	var pool = [];
 	
 	/*
-	 * Populates the pool array with Bullet objects
+	 * Populates the pool array with the given object
 	 */
-	this.init = function() {
-		for (var i = 0; i < size; i++) {
-			// Initalize the bullet object
-			var ball = new Ball();
-			ball.init(0,0, imageRepository.ball.width,
-			            imageRepository.ball.height);
-			pool[i] = ball;
+	this.init = function(object) {
+		if (object == "ball") {
+			for (var i = 0; i < size; i++) {
+				// Initalize the ball object
+				var ball = new Ball("ball");
+				ball.init(0,0, imageRepository.ball.width,
+				            imageRepository.ball.height);
+				pool[i] = ball;
+			}
+		}
+		else if (object == "cup") {
+			for (var i = 0; i < size; i++) {
+				var cup = new Cup();
+				cup.init(0,0, imageRepository.cup.width, 
+					imageRepository.cup.height);
+				pool[i] = cup;
+			}
 		}
 	};
 
@@ -195,13 +212,48 @@ function Pool(maxSize) {
 }
 
 /**
+* Create the Cup object.
+*/
+function Cup() {
+	this.alive = false;
+	/*
+	* Sets Cup values
+	*/
+	this.spawn = function(x,y,speed) {
+		this.x = x;
+		this.y = y;
+		this.speed = speed;
+		this.alive = true;
+	};
+	/*
+	* Move the cup
+	*/
+	this.draw = function() {
+		// this.context.clearRect(this.x, this.y, this.width, this.height);
+		this.context.globalCompositeOperation="destination-over";
+		this.context.drawImage(imageRepository.cup, this.x, this.y);
+		this.context.restore();
+	};
+	/*
+	* Resets the cup values
+	*/
+	this.clear = function() {
+		this.x = 0;
+		this.y = 0;
+		this.speed = 0;
+		this.alive = false;
+	};
+}
+Cup.prototype = new Drawable();
+
+/**
 * Create the Primer object that the player controls. The primer is drawn on the
 * "ball" canvas and uses dirty rectangles to move around the screen.
 */
 function Primer() {
 	this.speed = 3;
 	this.ballPool = new Pool(1);
-	this.ballPool.init();
+	this.ballPool.init("ball");
 
 	var shootRate = 1;
 	var counter = 0;
@@ -287,7 +339,11 @@ function Game() {
 			Ball.prototype.context = this.mainContext;
 			Ball.prototype.canvasWidth = this.mainCanvas.width;
 			Ball.prototype.canvasHeight = this.mainCanvas.height;
-			
+
+			Cup.prototype.context = this.mainContext;
+			Cup.prototype.canvasWidth = this.mainCanvas.width;
+			Cup.prototype.canvasHeight = this.mainCanvas.height;
+
 			// Initialize the background object
 			this.background = new Background();
 			this.background.init(0,0); // Set draw point to 0,0
@@ -300,6 +356,29 @@ function Game() {
 			// var primerStartY = this.primerCanvas.height/4*3 + imageRepository.primer.height*2;
 			this.primer.init(primerStartX, primerStartY, imageRepository.primer.width,
 			               imageRepository.primer.height);
+
+			// Initialize the cup pool object
+			this.cupPool = new Pool(30);
+			this.cupPool.init("cup");
+			var height = imageRepository.cup.height;
+			var width = imageRepository.cup.width;
+			var x = (this.primerCanvas.width/2) - (width*4/2);
+			var y = height*4;
+			var spacer = y/16;
+			for (var i = 1; i <= 10; i++) {
+				this.cupPool.get(x,y,0);
+				x += width;
+				if (i == 4) {
+					x = (this.primerCanvas.width/2) - (width*3/2);
+					y += spacer;
+				} else if (i == 7) {
+					x = (this.primerCanvas.width/2) - (width);
+					y += spacer;
+				} else if (i == 9) {
+					x = (this.primerCanvas.width/2) - (width/2);
+					y += spacer;
+				}
+			}
 
 			return true;
 		} else {
@@ -314,7 +393,6 @@ function Game() {
 	};
 }
 
-
 /**
  * The animation loop. Calls the requestAnimationFrame shim to
  * optimize the game loop and draws all game objects. This
@@ -326,6 +404,7 @@ function animate() {
 	game.background.draw();
 	game.primer.move();
 	game.primer.ballPool.animate();
+	game.cupPool.animate();
 }
 
 // The keycodes that will be mapped when a user presses a button.
