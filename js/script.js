@@ -36,6 +36,9 @@ $(document).ready(function(){
     $('.ui.centered.fluid.card')
       .css('display', 'flex')
       ;
+    $('.ui.card')
+      .css('display', 'flex')
+      ;
     $('.hider.ui.segment')
     .css('display', 'none')
     ;
