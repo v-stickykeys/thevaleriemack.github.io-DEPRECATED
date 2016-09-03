@@ -1,0 +1,157 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: white;
+}
+
+.masthead.segment {
+	max-height: 600px;
+}
+
+#precontainer {
+	margin-top: 200px;
+	padding: 0;
+	font-size: 1.4em;
+}
+
+.ui.masthead.basic.inverted.segment,
+.ui.sizer.vertical.basic.inverted.segment {
+	background-color: white;
+}
+
+.ui.masthead.basic.segment,
+.ui.sizer.vertical.basic.segment {
+}
+
+.ui.huge.centered.header {
+	font-family: 'Lora', "helvetica", serif;
+}
+
+#theHead {
+	font-family: 'Lora', "helvetica", serif;
+}
+
+#dropdown-icon {
+	margin-top: 40px;
+}
+
+#dropdown-icon-mobile {
+	display: none;
+}
+
+.plus.icon.wrapper {
+	margin-top: 20px;
+}
+
+#container {
+	margin: 160px 0px 0px 0px;
+}
+
+#sdBr {
+	padding-top: 40px;
+}
+
+.custom {
+	width: 22px;
+	padding-top: 1px;
+}
+
+.ui.basic.inverted.button {
+	border: none;
+}
+
+#hdrImg {
+	margin-top: -200px;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+	z-index: -10;
+	-webkit-filter: blur(.8px);
+	filter: blur(.8px);
+}
+
+#bttn {
+	position: fixed;
+	margin: 0px 0px 0px 0px;
+	float: left;
+	display: none;
+}
+
+#covers {
+/*	max-width: 720px;*/
+}
+
+.ui.divider {
+	padding: 20px 0px;
+}
+
+.ui.centered.fluid.card {
+	margin-bottom: 80px;
+}
+
+.description {
+	text-transform: uppercase;
+}
+
+.ui.medium.image.left.floated {
+	float:left;
+	padding:10px 0px;
+	cursor: pointer;
+}
+
+.image.mod {
+	width: 680px;
+	height: auto;
+	top: 0;
+}
+
+.close.icon {
+	cursor: pointer;
+}
+
+.hider.ui.segment {
+	opacity: 0;
+	margin-bottom: 80px;
+}
+
+.ui.footer.vertical.segment {
+	text-align: center;
+	margin: 100px 0px 20px 0px;
+
+}
+
+#jankless {
+	display: none;
+}
+
+@media all and (max-width: 700px) {
+	/*#menu{display: none;}*/
+	/*.masthead.segment{min-height: 180px;}*/
+	#precontainer {margin-top: 20px; font-size: 1.3em;}
+	#container {margin-top: 20px;}
+	#dropdown-icon-mobile {display: block; margin-top: 80px;}
+	#dropdown-icon {display: none;}
+	#jankless{display: inline;}
+	#sdBr{display: none;}
+	#hdrImg{display: none;}
+	#FUCKWIT {padding: 0px;}
+	.ui.centered.fluid.card {margin-bottom: 40px;}
+
+	.ui.masthead.basic.inverted.segment,
+.ui.sizer.vertical.basic.inverted.segment {
+	background-color: black;
+}
+
+.ui.masthead.basic.segment,
+.ui.sizer.vertical.basic.segment {
+	color: black;
+}
+
+.ui.huge.centered.header {
+	color: black;
+	font-family: 'Lora', "helvetica", serif;
+}
+
+
+}
