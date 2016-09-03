@@ -60,12 +60,18 @@ p {
 	padding-top: 3px;
 }
 .custom {
-	width: 22px;
-	padding-top: 10px;
+	width: 30px;
+}
+
+.ui.basic.huge.inverted.button {
 }
 
 .ui.basic.inverted.button {
 	border: none;
+}
+
+#reqres {
+	margin-top: 10px;
 }
 
 #hdrImg {
