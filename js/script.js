@@ -60,27 +60,27 @@ $(document).ready(function(){
   });
 });
 
-  $(document).on('scroll', function(e){
-
-    // fade to white on scroll
-    // $('#hdrImg').css('opacity',
-    //   ( 1 - ( $(document).scrollTop() / 400 ) )
-    // );
-  
-    // parallax move on scroll
-    $('#hdrImg').css('margin-top',
-      ( -200 - ( $(document).scrollTop() * 1.2) )+'px'
-      );
-
-    // if ($(document).scrollTop() > 150) {
-    //   $('#about')
-    //     .css('visibility', 'hidden');
-    // } else {
-    //   $('#about')
-    //     .css('visibility', 'visible');
-    // };
-
-  });
+//  $(document).on('scroll', function(e){
+//
+//    // fade to white on scroll
+//    // $('#hdrImg').css('opacity',
+//    //   ( 1 - ( $(document).scrollTop() / 400 ) )
+//    // );
+//  
+//    // parallax move on scroll
+//    $('#hdrImg').css('margin-top',
+//      ( -200 - ( $(document).scrollTop() * 1.2) )+'px'
+//      );
+//
+//    // if ($(document).scrollTop() > 150) {
+//    //   $('#about')
+//    //     .css('visibility', 'hidden');
+//    // } else {
+//    //   $('#about')
+//    //     .css('visibility', 'visible');
+//    // };
+//
+//  });
 
 // cards dimmer
   $('.card .image').dimmer({
