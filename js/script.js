@@ -89,11 +89,10 @@ $(document).ready(function(){
 
 
 if (document.documentElement.clientWidth < 700) {
-  document.getElementById("leftSide").className = "two wide";
-  document.getElementById("mnCntnt").className = "fourteen wide column";
+  document.getElementById("mnCntnt").className = "sixteen wide column";
 } else {
   document.getElementById("leftSide").className = "four wide column";
-  document.getElementById("mnCntnt").className = "twelve wide column";
+  document.getElementById("mnCntnt").className = "eleven wide column";
 }
 
 // loop

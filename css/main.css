@@ -28,11 +28,11 @@ p {
 }
 
 .ui.huge.centered.header {
-	font-family: 'Lora', "helvetica", serif;
+/*	font-family: 'Lora', "helvetica", serif;*/
 }
 
 #theHead {
-	font-family: 'Lora', "helvetica", serif;
+/*	font-family: 'Lora', "helvetica", serif;*/
 }
 
 #dropdown-icon {
@@ -148,24 +148,25 @@ p {
 	#dropdown-icon {display: none;}
 	#jankless{display: inline;}
 	#sdBr{display: none;}
+	#leftSide{display: none;}
 	#hdrImg{display: none;}
 	#FUCKWIT {padding: 0px;}
 	.ui.centered.fluid.card {margin-bottom: 40px;}
-
+	
 	.ui.masthead.basic.inverted.segment,
-.ui.sizer.vertical.basic.inverted.segment {
-	background-color: black;
-}
-
-.ui.masthead.basic.segment,
-.ui.sizer.vertical.basic.segment {
-	color: black;
-}
-
-.ui.huge.centered.header {
-	color: black;
-	font-family: 'Lora', "helvetica", serif;
-}
+	.ui.sizer.vertical.basic.inverted.segment {
+		background-color: black;
+	}
+	
+	.ui.masthead.basic.segment,
+	.ui.sizer.vertical.basic.segment {
+		color: black;
+	}
+	
+	.ui.huge.centered.header {
+		color: black;
+		/*	font-family: 'Lora', "helvetica", serif;*/
+	}
 
 
 }
